@@ -1,0 +1,9 @@
+{
+map            "q3start2"
+longname       "Episode Portal"
+capturelimit   "8"
+type           "cctf ctf oneflag harvester overload"
+author         "Scancode"
+quote          "wtf is the episode portal?"
+mod            "threewave"
+}

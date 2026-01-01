@@ -1,0 +1,52 @@
+[NUM] [                NAME] [LENGTH] [STRING...
+[  0] [CS_SERVERINFO       ] [  559 ] [\bot_minplayers\0\dmflags\0\fraglimit\10\g_gametype\6\mapname\q3wcp9\protocol\68\sv_allowDownload\1\sv_dlRate\100\sv_floodProtect\1\sv_hostname\[PORT] 3W CTF server\sv_maxRate\0\sv_maxclients\8\sv_minRate\0\sv_privateClients\0\timelimit\0\version\Q3 1.32e win_msvc-x86_64 Jan 29 2019\capturelimit\8\echo_svfps\20\echo_version\threewave 1.7\g_lithium\1\g_maxGameClients\0\g_maxNudge\50\g_maxPackets\100\g_minNudge\-50\g_minPackets\30\g_needpass\0\g_offhandGrapple\0\g_pointlimit\15\g_roundlimit\5\g_serverData\P01 \gamename\threewave\p_enablePortal\1\trigger\0]
+[  1] [CS_SYSTEMINFO       ] [  320 ] [\fs_game\threewave\g_synchronousClients\0\pmove_fixed\0\pmove_msec\8\sv_cheats\1\sv_pure\0\sv_referencedPakNames\threewave/pak05 threewave/pak04 threewave/pak00 threewave/CPMAskins baseq3/q3wpak1 baseq3/pakta\sv_referencedPaks\1003471676 205599539 2022767349 356048646 705607979 1738266476 \sv_serverid\44741\timescale\1]
+[  2] [CS_MUSIC = 2        ] [   16 ] [music/sonic5.wav]
+[  3] [CS_MESSAGE          ] [   21 ] [Spider Crossings - 3W]
+[  6] [CS_SCORES1          ] [    1 ] [0]
+[  7] [CS_SCORES2          ] [    1 ] [0]
+[ 20] [CS_GAME_VERSION     ] [   13 ] [threewave 1.7]
+[ 21] [CS_LEVEL_START_TIME ] [    1 ] [8]
+[ 22] [CS_INTERMISSION     ] [    1 ] [0]
+[ 27] [CS_ITEMS            ] [   50 ] [01011111111111111000101111100001010100000000000000]
+[ 28] [CS_MOTD_EXT         ] [  146 ] [        ^2Threewave CTF
+
+ ^2Keep up to date on the latest 
+       Threewave news @ 
+
+   ^7http://www.threewave.com/    
+
+        ^2Happy Fraggin'
+]
+[361] [CS_SOUNDS2          ] [   20 ] [sound/player/fry.wav]
+[362] [CS_SOUNDS3          ] [   23 ] [sound/world/jumppad.wav]
+[363] [CS_SOUNDS4          ] [   30 ] [sound/items/poweruprespawn.wav]
+[616] [CS_PLAYERS1         ] [  126 ] [n\^3TheMuFF^7\t\2\model\sarge/blue\hmodel\sarge/blue\g_redteam\\g_blueteam\\c1\4\c2\5\hc\100\w\0\l\0\tt\0\tl\0\voicetype\0\c\6]
+[680] [CS_LOCATIONS1       ] [    7 ] [unknown]
+[681] [CS_LOCATIONS2       ] [   23 ] [^1Red^7 Upper Entrances]
+[682] [CS_LOCATIONS3       ] [   23 ] [^1Red^7 Ground Entrance]
+[683] [CS_LOCATIONS4       ] [   16 ] [^1Red^7 Basement]
+[684] [CS_LOCATIONS5       ] [   23 ] [^1Red^7 Tunnel Entrance]
+[685] [CS_LOCATIONS6       ] [   12 ] [^1Red^7 Pool]
+[686] [CS_LOCATIONS7       ] [   23 ] [^1Red^7 Upper Entrances]
+[687] [CS_LOCATIONS8       ] [   24 ] [^1Red^7 Upper Cross Zone]
+[688] [CS_LOCATIONS9       ] [   16 ] [^1Red^7 Outstare]
+[689] [CS_LOCATIONS10      ] [   18 ] [^1Red^7 Stair Zone]
+[690] [CS_LOCATIONS11      ] [   17 ] [^1Red^7 Jump Zone]
+[691] [CS_LOCATIONS12      ] [   12 ] [^1Red^7 Flag]
+[692] [CS_LOCATIONS13      ] [   18 ] [^1Red^7 Stair Side]
+[693] [CS_LOCATIONS14      ] [   17 ] [^1Red^7 Jump Side]
+[694] [CS_LOCATIONS15      ] [    8 ] [^7Q-Zone]
+[695] [CS_LOCATIONS16      ] [   24 ] [^4Blue^7 Upper Entrances]
+[696] [CS_LOCATIONS17      ] [   24 ] [^4Blue^7 Ground Entrance]
+[697] [CS_LOCATIONS18      ] [   17 ] [^4Blue^7 Basement]
+[698] [CS_LOCATIONS19      ] [   24 ] [^4Blue^7 Tunnel Entrance]
+[699] [CS_LOCATIONS20      ] [   13 ] [^4Blue^7 Pool]
+[700] [CS_LOCATIONS21      ] [   24 ] [^4Blue^7 Upper Entrances]
+[701] [CS_LOCATIONS22      ] [   25 ] [^4Blue^7 Upper Cross Zone]
+[702] [CS_LOCATIONS23      ] [   17 ] [^4Blue^7 Outstare]
+[703] [CS_LOCATIONS24      ] [   19 ] [^4Blue^7 Stair Zone]
+[704] [CS_LOCATIONS25      ] [   18 ] [^4Blue^7 Jump Zone]
+[705] [CS_LOCATIONS26      ] [   13 ] [^4Blue^7 Flag]
+[706] [CS_LOCATIONS27      ] [   19 ] [^4Blue^7 Stair Side]
+[707] [CS_LOCATIONS28      ] [   18 ] [^4Blue^7 Jump Side]

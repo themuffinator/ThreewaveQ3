@@ -1,0 +1,127 @@
+11/11/2001
+- fixed score reset on team switch in CTFS
+- fixed cg_lagometer reset by SLUDGE's debug code in the UI
+- fixed noprojectiltrail for nails in CCTF
+- fixed not enough spawns in CTFS
+- fixed grapple for HPBs in CCTF
+- changed grapple speed modif code so that it can be predicted ( moved to bg_pmove )
+- removed the clearing of the sessiondata for clients when going back to portal ( possible cause of unpure bug )
+- previous items also allows for keeping same teams between maps while going to portal
+- removed grappling onto teammates
+- added g_randomRunes to make the runes spawn randomly ( 1 off rune and 1 def rune to each bases tho )
+- added chat flooding protection, command flooding protection and userinfo update flood protection ( all triggered on with g_safeFloodProtect 1 )
+- added function to disable last 4 played maps in portal, simple extension of the disable portal code
+- changed MG start ammo to 50 instead of 100 in CCTF
+
+12/11/2001
+- added armorclass on draw team health
+- added CCTF challenge/response system to prevent fake clients
+- started adding admin functionnalities
+
+13/11/2001
+- added admin pause feature
+- added admin locked teams feature
+- added admin password functionnality
+- added admin change map
+- added admin restart function
+- fixed surface lighning discharge damage bug
+- added armor type on cg_drawteamhealth
+
+15/11/2001
+- added matchmode function
+
+19/11/2001
+- fixed say_team at intermission
+- fixed disordered scores at intermission
+- fixed bad models in forcemodel when people switch teams
+- added kick functions
+- added status functions
+- added ip address storage for clients ( holds through map changes )
+- put back cpma style true lightning ( old one is 2 )
+- added feature where people are kept in their teams through map changes ( portal 2 )
+- fixed problem where no model would show up if you dropped ammo on a map that didnt have that ammo
+- added highlight on team overlay for self(yellow) and flag carrier(cyan for red team, orange for blue team)
+
+25/11/2001
+- added playerstate encryption security ( see ifdef PLAYERSTATE_ENCRYPTION )
+
+26/11/2001
+- i think i fixed the enemy model stuff for good
+- added banning system, bans go to ban.txt, old id system disabled because of problems
+- changed ammo for lg weapon pickup in cctf from 100 to 80
+- added highlighting of dead people on the scoreboard in CTFS
+
+4/12/2001
+- fixed cg_bobup negative, exploit
+
+9/12/2001
+- added radio!
+
+10/12/2001
+- added extra logging
+- tweaked scores for CTFS and CCTF
+
+15/12/2001
+- removed UIE cvars, might have an impact on starting servers from ingame
+- now players can only switch teams in CTFS when they are in the warmup of their offensive round
+- switching to spectator will make you lose your score
+- fixed missing 1st round info in CTFS (yet again)
+- overtime now optionnal through g_overtime
+- in matchmode the players wait at intermission forever, no highscores either
+- there is now a 5 second countdown before resuming after pause
+- warmup can now be paused
+- ctfs timers are now paused correctly
+- cg_drawClientNum 1 draws the clientnum of each client on the scoreboard
+- fixed no team bonuses in ctfs
+- added g_dropLaggedClients, which sets in seconds the amount of time someone who is CON_CONNECTED can be allowed to have a ping over 999
+  e.g.: someone who is vid_restarting wont be affected because he is CON_CONNECTING (i think... have to test this)
+  
+16/12/2001
+- added new chat interpolation $D (last client you damaged) and $G (last client you killed)
+- added teamed spectators ( /specred, /specblue, /specnone )
+- added ignore functions for radio ( /radio_ignore clientnum, /radio_unignore, /radio_ignorelist, /radio_unignore all )
+
+20/12/2001
+- added g_minNudge g_maxNudge g_minPackets and g_maxPackets so that servers can control them on the clients
+- finally fixed id's fucked up CPMA truelightning
+- added cg_nomip ( loads graphic content except map, with picmip 0 )
+- added g_describeServer ( describe server type in the hostname )
+
+24/12/2001
+- added g_instagib for CCTF
+- added g_minPlayersForHighscores which does what it says
+
+27/12/2001
+- players can now start moving at the 4th second of warmup in a CTFS round
+- added g_maxTeamKnockback cvar for CTFS, where it specifies the max amount of knockback you receive from teammates
+- added system to prevent respawning right next to the player who just killed you
+- added new checks to prevent getting hooked by someone and the cord going through walls
+
+1/1/2002
+- added Score_red, Score_blue, Players_red, Players_blue, Score_time serverinfo CVARS accessible through status requests for ping tools
+
+VERSION 1.2
+
+7/1/2001
+- fixed getting defend flag points near you flag in CTFS when you are on offense
+- fixed server spam of CS_SERVERINFO on player connect (cl_parseservermessage error)
+- fixed server spam of CS_SERVERINFO on map_restart
+- fixed teamed spectators not able to global chat
+- fixed scoreboard error where player names are not drawn when connecting
+- fixed error with cg_acceptVoiceChats where it prevented writing of voice text
+- fixed grapple through floor on q3wc1
+- fixed S_FindName error (hard to verify, but should be fixed)
+- fixed server crash because of invalid clientnums caused by my floodprotect
+- fixed server crash because of bad IO handling in new ban code
+- fixed james model bug
+- fixed no quickstart server on fresh install
+- offensive round marker under scores now more apparent in CTFS
+- switching to spectator in CTFS makes you lose your score, people who wish to switch teams need
+to wait for the warmup of their offensive round (this feature is required to let people keep their score
+and not abuse team switching by switching teams to always be playing offensive rounds to get more points)
+
+9/1/2001
+- fixed gauntlet hit in CTFS warmup
+- fixed knockback for shotgun in CTFS (using g_maxTeamKnockback)
+- grapple now has 2 modes, predicted mode for hpbs and non-predicted mode for lpbs (cg_predictGrapple 0 or 1)
+- fixed quickstart menu not adding servers correctly

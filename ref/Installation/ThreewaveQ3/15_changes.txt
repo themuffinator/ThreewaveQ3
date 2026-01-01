@@ -1,0 +1,136 @@
+1.5 done
+-------------------------------------
+additions:
+- add cvar for savage league (fixed rune spawn, same teams all the time) (g_fixedRunes)
+- add say_teamnl (say team no location)
+- add $i -> closest item, mega, armor, powerup, ammo
+- add sparklies to runes
+- added new radio
+- tell the location of the flag when it is dropped in CTFS
+- speed up grapple when got haste ( +25 bonus for shoot and pull )
+- make holy shit global
+- g_highscores now counts 3 things, score, dmg/time and fastest cap
+- add a /players command like OSP
+- echo sv_fps to serverinfo cvar
+- echo gameversion to connect screen and serverinfo
+- no flag events when teams are unbalanced 
+(g_teamForceBalance now defines the maximum difference between the number of players in each team, default of 1)
+- add autoradio for some events that dont give time to use the menu or binds
+autoradio mode will fire cvars on the client, (cg_autoradio 1)
+the cvars are:event_droprune,event_droparmor,event_dropammo,event_dropflag,event_gotquad,event_gotflag,event_seecarrier
+- add /reportItem command which reports an item closest to the player using the radio and a chat msg
+(use these cvars to customize the msg : event_megaavail, event_armoravail, event_runeavail, event_itemavail )
+- added team colored weapons (cg_teamrockets, cg_teamlightning, cg_teamplasma)
+- episode portal, 4 x 1->8 map episodes (rotations), with 4 minigames
+(p_enablePortal 2, only works on an episode portal)
+- /adm_ready players in matches for the admin
+- show self stats on scoreboard always (to view the followed player's press the WALK button)
+- added "color" (cg_forcecolors 1 to force your teammates to your color) and "cg_enemyColors" :D 
+  ( format is in string "<EFFECTS><HEAD><TORSO><LEGS><RAILCORE>" )
+valid colors are from 0 to f (hexa), needs to be set using quotes, ie: /cg_teamColors "0b5f7"
+- added g_lithium for classicctf rules in dm gametypes (owns) and 1 flag CTF
+- can now disable or enable certain voting by setting the value of g_allowvote to the sum 
+of what you want enabled which are:
+	off		: 0 (only 0, duh)
+	kick voting     : 1
+	map voting      : 2
+	portal voting   : 4
+	gametype voting : 8
+	settings voting : 16
+	restart voting  : 32
+	nextmap voting  : 64
+- can now give a reason for voting, type this for instance : 
+<command> <reason> i.e.: kick crash being a bitch
+- set cg_autoScreenshot and at the 4 seconds mark after map completion an 
+automatic screenshot of the scoreboard is taken
+- spectator time not counted anymore, so if you drop to spec for 5 minutes, your time will be the same as that you
+had when you switched to spectator
+- new FFA scoreboard ( need to add tournament wins/losses )
+- s_ambient to disable looping map sounds ( 1 on (default), 0 off )
+- adm_forceteam, admin can force someone to a team, adm_forceteam <clientnum> <team>, 
+ie: adm_forceteam 4 red
+- 1 flag CTF anyone? g_gametype 5
+- introducing 3wave arena (hihihi), g_gametype 11, works on any maps, g_roundlimit
+  is the number of rounds to win (note: needs a timelimit to switch maps)
+- added new option for admins to restrict certain maps to certain gametypes, in your config
+  define a cvar named p_portalGametypesXX where XX is the portal number, with the gametypes you
+  want for that particular portal, i.e. p_portalGametypes08 "-1,5,9,10,11" would give p_portalMap08
+  the 5,9,10 and 11 gametypes (NOTE: always 5 gametypes, always delimited by commas)
+  (NOTE2: for the episode portal, you restrict and episode by setting the cvar above for the first 
+  portal in the episode, i.e: 01,09,17,25)
+- new spectator controls, pressing attack switches you between following and free cam
+  pressing left and right cycles forward or backwards through the players
+- new colors for names, same ones that are used for models
+- added cg_autoRecord, which records from start to finish each match 
+  with an automatically generated name
+- added adm_screenshot, admin can force everyone to take a screenshot 
+  and request them after the match
+- triple highscoreboard( score + dmg/time ) with fastest cap underneath
+  ( g_minTimeForHighscores specifies minimum played time to be included for dmg/time highscore )
+- you can now have multiple motd files, specify which one you want to use with g_motdfile (default:"motd.txt")
+- g_keepTeams 0 will reset teams to spectators after each map,
+  g_keepTeams 1 will keep the same teams through each map (default)
+  g_keepTeams 2 will rebalance the teams depending on skill after each map
+- cg_damageFeedback, enables or disable view angle kickback when damaged
+- /stats -precise gives a precise stats dump about everyone
+- if p_disableLastPlayedPortals is set, last played episode will be disabled (only one episode can be disabled)
+- added skill, the equation is quite complex, i dont know if i'll post it, basically, a high skill is good :D
+- added different hit beeps for different amount of damage you inflict
+- added g_profanity, (defaults to 1(allow)), which if off will prevent holyshit and other profanious voice messages
+- q3 1.17 style floor damage in Threewave Arena
+    
+changes:
+- kill team leader crap
+- disable /kill in portal, add a 5 second penalty when /kill is used during a game
+- make locked team switch in CTFS an option (g_CTFSswitch), people can now freely switch teams and keep their scores
+- dont autoswitch to lg when out of ammo under water
+- made fonts smaller in demos menu
+- accelerated nails a little
+- force portal exit after 5 seconds
+- make admin settable the amount of last maps blocked in portal
+(p_disableLastPlayedPortals sets the amount of maps to disable)
+- upgraded nailgun a little so its more useful (faster nails that do 21dmg instead of 20)
+- nailgun now has a small spread and dmg upgraded to 22
+- serverinfo score reporting now optional (g_reportScores)
+- lowered all starting ammos for CTFS
+- new flood protect scheme, allows a flood of 3 messages then the player 
+  gets muted for 2 seconds, and stays muted as long as he tries to flood
+- if user floods his userinfo to the server, e.g.:name script, he gets booted
+- removed voice only say commands
+- you can now give a custom message with your voice command by writing it after the
+  voice command, i.e.: /vsay_team ihavetheflag "i have the flag with $h and $a"
+  if no message is specified then the default voice text message is printed
+- naming convention of screenshots and demos respects OSP/CPMA's
+- client numbers now permanent on scoreboard, right under the head icon
+- admins cant be callvote kicked anymore
+- upper right teamoverlay now moves lagometer below timer
+
+fixes:
+- fix red quad gives off blue light
+- make adm_changemap not break map rotations
+- make death lowlight more obvious on scoreboard
+- fix player numbers in serverinfo string
+- fix $d (last player hurt) when round restarts
+- unpicmip flag icons
+- fixed matchmode staying after match, fixed matchmode in portal
+- fixed battlesuit crash bug
+- fixed /stats command so its more useful, put it back on autodump at end of map
+- fixed possible team kill bug in ctfs
+- inactivity timer now stays through spawns, so idlers are kicked in ctfs even if the 
+inactivity is longer than a round
+- fixed matchmode pause in CTFS
+- fixed inactivity drop in matchmode
+- fixed map stuck in matchmode when no one is on
+- check missing runes
+- followed players from spec now stick between rounds in CTFS
+- fixed plasma trail not using colors correctly
+- cg_marks 0 doesnt turn off shadows anymore
+- fixed disconnected overhead floating icon, yay!
+- fixed bug with cheat protection that could make you send incorrect information
+- fixed bug with timenudge getting reset to 0 when set to a negative value
+- fixed bug with startrecording being fired using wrong command
+- fixed bug with forcedmodels not loading right when you join from spectator sometimes
+- added some Pmove fixes
+- fixed bug in CTFS where dead teammates didnt receive bonus points for a capture
+- fixed keycatcher problem where it prevented moving and shooting while browsing the radio menu
+-

@@ -1,0 +1,80 @@
+{
+map            "q3wcp1"
+longname       "Japan CTF"
+capturelimit   "8"
+author         "g1zm0"
+quote          "sorry guys I talk too much"
+mod            "threewave"
+}
+
+{
+map            "q3wcp2"
+longname       "Cold Crossings"
+capturelimit   "8"
+author         "Scancode + Slash"
+quote          "GONG!"
+mod            "threewave"
+}
+
+{
+map            "q3wcp3"
+longname       "Hot Crossings"
+capturelimit   "8"
+author         "Scancode"
+quote          "It Burns!"
+mod            "threewave"
+}
+
+{
+map            "q3wcp4"
+longname       "Schadenfreude"
+capturelimit   "8"
+author         "Cornelius"
+quote          "Sanitized for your protection"
+mod            "threewave"
+}
+
+{
+map            "q3wcp5"
+longname       "ShiNNing Forces"
+capturelimit   "8"
+author         "Crewmaac"
+quote          "Beware the ShiNNing for the maac cometh"
+mod            "threewave"
+}
+
+{
+map            "q3wcp6"
+longname       "Devolved CTF"
+capturelimit   "8"
+author         "Mexx"
+quote          "Wars not make one great"
+mod            "threewave"
+}
+
+{
+map            "q3wcp7"
+longname       "Dynatron"
+capturelimit   "8"
+author         "Nedman"
+quote          "Milk, Legal At Any Age"
+mod            "threewave"
+}
+
+{
+map            "q3wcp8"
+longname       "Harsh Grounds"
+capturelimit   "8"
+author         "Beefster"
+quote          "...at the end of nowhere, within the abyss of chaos..."
+mod            "threewave"
+}
+
+{
+map            "q3wxs1"
+longname       "Silly Railings"
+capturelimit   "8"
+author         "Scancode"
+quote          "ugh..."
+mod            "threewave"
+}

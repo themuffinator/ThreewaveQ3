@@ -1,0 +1,182 @@
+new client cvars
+----------------
+cg_drawClientNum [0,1] 
+- draw the clientnum of the other players on the scoreboard (under the ping)
+
+cg_nomip [0,1] 
+- load the game media using r_picmip 0 while keeping the r_picmip for the rest (map,models)
+
+cg_crosshaircolor [0...7] 
+- color the crosshair with the specified color
+
+cg_drawPing [0,1] 
+- draw your ping at the upper right corner
+
+adminpass [string]
+- your admin password for the server's admin commands
+
+cg_radioVoice [0...3]
+- your radio voice : 1 is male, 2 is female, 3 is robot, 0 is model default gender
+
+cg_acceptVoiceOnly [0,1]
+- sets wether you will accept receiving voice only messages (no text)
+
+cg_forceVoice [0...3]
+- force every voice message you receive to use the specified voice
+
+cg_teamVoiceOnly [0,1]
+- if this is enabled you will only receive voice messages from your team
+
+useful cvars
+------------
+cg_noTaunt [0,1]
+- no voice taunting
+
+cg_teamChatsOnly [0,1]
+- only receive messages from your team's players
+
+cg_noVoiceChats [0,1]
+- disable voice chats completely
+
+new client commands
+-------------------
+radio
+- open the radio panel
+
+startrecording
+- start recording a demo with an automatically generated name
+
+stoprecording
+- stop record the previously started demo
+
+radio_ignore (integer)
+- ignore a specific client, by his client num
+
+radio_unignore (integer)
+- unignore a specific client, by his client num
+
+radio_ignorelist
+- print a list of the clients you are currently ignoring
+
+radio_unignoreall
+- unignore everyone
+
++fire (weaponnum) (weaponnum) ...
+- switch to and fire the first weapon you have in the list
+
+-fire
+- stop firing the weapon
+
+ready
+- mark yourself as ready in matchmode
+
+notready
+- unready yourself
+
+specred
+- spectate the red team in matchmode
+
+specblue 
+- spectate the blue team in matchmode
+
+specnone
+- stop spectating a team in matchmode
+
+new server cvars
+----------------
+portal:
+p_disableLastPlayedPortals [0,1]
+- disable last 4 played maps in the portal
+
+general:
+g_safeFloodProtect [0,1]
+- enable protection against flooding
+
+g_dropLaggedClients [0...]
+- time in seconds that someone can remain with a 999 ping on the server
+
+g_overtime [0,1]
+- allow overtime or not
+
+g_describeServer [0,1]
+- modify sv_hostname of server to reflect the gametype played
+
+g_minPlayersForHighscores [0...]
+- minimum amount of players on server to write to highscores
+
+g_instagib [0,1]
+- instagib mode for CCTF
+
+g_adminpass [string]
+- admin password for the server, for clients to use admin commands
+
+g_minNudge [integer]
+- minimum cl_timenudge players can set
+
+g_maxNudge [integer]
+- maximum cl_timenudge players can set
+
+g_minPackets [integer]
+- minimum cl_maxpackets players can set
+
+g_maxPackets [integer]
+- maximum cl_maxpackets players can set
+
+g_cheattest [0,1]
+- enable cheat protection
+
+admin commands
+--------------
+adm_matchmode
+- toggle matchmode on/off
+
+adm_lockteams
+- lock/unlock team switching in matchmode
+
+adm_pause
+- pause/resume game toggle
+
+adm_capturelimit (integer)
+- change the capturelimit
+
+adm_timelimit (integer)
+- change the time limit
+
+adm_pointlimit (integer)
+- change the pointlimit
+
+adm_fraglimit (integer)
+- change the fraglimit
+
+adm_status
+- list the clients with their client num and their ip address
+
+adm_kick (string)
+- kick a client by his name
+
+adm_clientkick (integer)
+- kick a client by his client num
+
+adm_banip (ip)
+- ban an ip address, or an ip address group
+
+adm_ban (string)
+- ban a player (kick ban)
+
+adm_clientban (integer)
+- ban a player (kick ban) by his client num
+
+adm_unbanip (ip)
+- remove an ip address from the ban list
+
+adm_banlist
+- print an output of the current bans, max 100 ips
+
+adm_changemap (string)
+- change map
+
+adm_restart
+- do a map_restart
+
+adm_coaching
+- toggle on/off teamed spectators to chat with players in team chat

@@ -1,0 +1,4 @@
+Threewave CTF 1.1
+--------------------
+- I had to kill the uie_* cvars to solve a problem with config file sizes, as a result the ingame
+server maker doesnt work anymore, you will have to start server using the config files i have included

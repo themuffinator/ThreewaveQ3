@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Threewave Manual</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+
+<style type="text/css">
+a:hover {color: #FCD703; text-decoration: none}
+a:link {font:verdana; text-decoration: none}
+A { text-decoration:none }
+.FORM {font-family: verdana,Arial, Helvetica, sans-serif; font-size: xx-small ; background-color: 000000; color: 3F4749;  border: #FFFFFF; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px}
+</style>
+
+
+</HEAD>
+
+<BODY text=#ffffff vLink=#c0c0c0 aLink=#c0c0c0 link=#cccccc bgColor=#000000 
+leftMargin=0 topMargin=0>
+<P align=center><br>
+</P>
+<div align="center">
+  <center>
+  <table border="1" cellpadding="0" cellspacing="0" width="730" bordercolor="#333333">
+    <tr>
+      <td>
+<div align="center">
+  <table border="1" cellpadding="0" cellspacing="0" width="732" bordercolor="#000000">
+    <tr>
+      <td width="730"><img border="0" src="images/toplogo2.jpg" width="730" height="185"></td>
+    </tr>
+    <tr>
+      <td width="730" background="images/hznt_bar.jpg" valign="top" align="right"><font face="arial, helvetica" size="2"><b>irc.enterthegame.com
+        #Threewave&nbsp;&nbsp;&nbsp;</b></font> </td>
+    </tr>
+  </table>
+</div>
+<TABLE cellSpacing=0 cellPadding=0 width=732 align=center border=1 bordercolor="#000000">
+      
+      
+  <TR bgColor=silver>
+    <TD vAlign=top align=left bgColor=#6F0000 background="images/lt_bground.jpg" width="125">
+    
+      
+    
+      <img hspace="0" src="images/nav.jpg" border="0" width="125" height="16"><br>
+      <br>
+      &nbsp;
+    <A href="index.html"><b><font face="Arial" size="2">Table Of Contents</font></b></A>
+  <p align="center"><b><a href="6.html"><font face="Arial" size="2">&lt; Back</font></a><font face="Arial" size="2">&nbsp;&nbsp;
+  </font><font face="Arial" size="3">-&nbsp;&nbsp;</font><font face="Arial" size="2">
+  <a href="8.html">Forth &gt;</a></font></b>
+</TD>
+    <TD vAlign=top width=601 bgColor=#181818>
+      &nbsp;
+      <div align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="95%">
+          <tr>
+            <td width="100%">
+              <div align="left">
+                <table border="0" cellpadding="2" cellspacing="0" width="100%">
+                  <tr>
+                    <td width="100%">
+                      <p align="center">
+                      
+                      </center>
+                      <p align="left"><b><font face="arial, helvetica" size="3">Dollar
+                      Sign Macros &quot;$$&quot;</font></b></p>
+                    <hr align="left" size="3" color="#850707">
+  <FONT size="0">
+  <FONT color="#F0F0A0"><H3><font face="Arial">Introduction To Macros</font></H3></FONT>
+  <!-- META: The meat of the docmuent should go here -->
+
+  </font>
+
+  <P><font face="Arial" size="2">Macros in Threewave are just a fancy name for A Shorthand
+  Language With Lots Of Dollarsigns that we created.</font>
+
+  <P><font face="Arial" size="2">Often in teamgames, players message each other.
+  </font>  <TT><font size="2">"I was
+  killed by the red team"</font></TT> <font face="Arial" size="2"> could be one message.  But wait -- what
+  if you're on the blue team?  You need a separate message.  Not
+  anymore.  Now, you can type <TT><font size="2">"I was killed by $Q"</font></TT> and it
+  will automatically fill in the enemy team's colour.</font>
+  <FONT size="0">
+
+  <FONT color="#F0F0A0"><H3><font face="Arial">The List</font></H3></FONT>
+
+  <P>
+  </font>
+  <UL>
+	<font face="Arial" size="2">
+	<LI><b> $H</b> - Your current health
+    <LI><b> $A</b> - Current armor and class
+    <LI><b> $W</b> - Current weapon
+    <LI><b> $N</b> - List all weapons the player currently has
+    <LI><b> $M</b> - Amount of ammo for current weapon
+    <LI><b> $U</b> - Amount of ammo for all weapons in arsenal
+    <LI><b> $T</b> - Current tech (same as current rune)
+    <LI><b> $R</b> - Current rune (same as current tech)
+    <LI><b> $E</b> - Closest tech/rune on the ground that can be seen
+    <LI><b> $I</b> - Closest item, mega, armor, powerup, ammo
+	<LI><b> $B</b> - Current holdable (medkit/teleporter/powerscreen)
+    <LI><b> $L</b> - Current location (q3's target_location used on overlay)
+    <LI><b> $O</b> - Current location Q2 style (nearest weapon/powerup)
+    <LI><b> $P</b> - Closest player that can be seen
+    <LI><b> $F</b> - Closest friendly player that can be seen
+    <LI><b> $Y</b> - Closest enemy player that can be seen
+    <LI><b> $C</b> - Last player to attack you
+    <LI><b> $K</b> - Last player to kill you
+    <LI><b> $S</b> - Colour of your team
+    <LI><b> $Q</b> - Colour of enemy team
+    <LI><b> $D</b> - Last enemy you damaged
+    <LI><b> $G</b> - Last enemy you killed    
+    <LI><b> $$</b> - Print a single dollarsign
+
+  </UL>
+
+  <FONT color="#F0F0A0"><H3><font face="Arial">Some Examples</font></H3></FONT>
+  <TT>
+  <UL>
+  <LI><font size="2">&quot;say_team $Y is at $O, need backup!" [<B>Shrew is at <FONT color="red">red</FONT> rocket launcher, need backup!</B>]</font>
+  <LI><font size="2">&quot;say_team Incoming $Q at $L" [<B>Incoming <FONT color="red">red</font> at crossroads lower</B>]</font>
+  <LI><font size="2">&quot;say_team I am down to $H and $A" [<B>I am down to 93 Health and No Armor</B>]</font>
+  <LI><font size="2">&quot;say_team I just dropped the $R at $L near $O." [<B>I just dropped haste rune at <FONT color="blue">blue</FONT> flag room, near <FONT color="blue">blue</FONT> railgun</B>]</font>
+  <LI><font size="2">&quot;say_team I have $$20 in my bank account" [<B>I have $20 in my bank account</B>] [Note: I just put this here to show the trivial $$ macro]</font>
+  </ul>
+  </TT>
+      <P align="center"><b><font face="Arial" size="2">&nbsp;</font><a href="6.html"><font face="Arial" size="2"><br>
+      &lt; Back</font></a><font face="Arial" size="2">&nbsp;&nbsp; </font><font face="Arial" size="3">-&nbsp;&nbsp;</font><font face="Arial" size="2">
+  <a href="8.html">Forth &gt;</a></font></b>
+                      <font face="Arial">
+                      <div align="center">
+                        <p align="left"><font size="0"><!-- META: The meat of the document should go here -->
+                            <p>&nbsp;
+                        </div>
+                      </font></font>
+                    <p align="left">
+                      <br>
+                    </p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+  <center>
+              <p>&nbsp;
+              </p>
+              <div align="left">
+                <table border="0" cellpadding="2" cellspacing="0" width="100%">
+                  <tr>
+                    <td width="100%" align="right">
+                      <p align="center"></p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD></TR></TABLE>
+      </td>
+    </tr>
+  </table>
+</div>
+ <!--Tracker--> 
+                <center><p><br>
+</center>
+</BODY></HTML>

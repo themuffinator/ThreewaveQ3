@@ -1,0 +1,391 @@
+female
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Statements
+//////////////////////////////////////////////////////////////////////////////////////
+ihaveflag
+{
+	sound/comms/female/haveflag.wav		"I've got the flag!"
+}
+flagcarrierhere
+{
+	sound/comms/female/flaghere.wav		"<<< Enemy flag carrier is here!"
+}
+flagcarrierhigh
+{
+	sound/comms/female/flaghigh.wav		"Enemy flag carrier escaping high!"
+}
+flagcarrierlow
+{
+	sound/comms/female/flaglow.wav			"Enemy flag carrier escaping low!"
+}
+baseoverrun
+{
+	sound/comms/female/baseoverrun.wav		"Our base is overrun!"
+}
+areaoverrun
+{
+	sound/comms/female/areaoverrun.wav		"<<< Warning!  Area overrun!"
+}
+basesecure
+{
+	sound/comms/female/basesecure.wav		"Our base is secure!"
+}
+areasecure
+{
+	sound/comms/female/areasecure.wav		"<<< This area secure."
+}
+incoming
+{
+	sound/comms/female/incoming.wav		"Incoming!"
+}
+incominghigh
+{
+	sound/comms/female/incominghigh.wav		"Incoming high!"
+}
+incominglow
+{
+	sound/comms/female/incominglow.wav		"Incoming Low!"
+}
+incomingquad
+{
+	sound/comms/female/incomingquad.wav		"Incoming quad!!!"
+}
+itemavailable
+{
+	sound/comms/female/itemavail.wav		"<<< Item available."
+}
+techavailable
+{
+	sound/comms/female/itemavail_a1.wav		"<<< Tech available."
+}
+megaavailable
+{
+	sound/comms/female/itemavail_a2.wav		"<<< Mega available."
+}
+armoravailable
+{
+	sound/comms/female/itemavail_a4.wav		"<<< Armor available."
+}
+gotquad
+{
+	sound/comms/female/gotquad.wav			"I have the quad!"
+}
+enemybaseclear
+{
+	sound/comms/female/enemyclear.wav		"Enemy base clear."
+}
+
+///////
+// For cctf
+///////
+droprune
+{
+	sound/comms/female/droprune.wav		"Dropping rune."
+}
+dropflag
+{
+	sound/comms/female/dropflag.wav		"Dropping flag."
+}
+dropweapon
+{
+	sound/comms/female/dropweapon.wav		"Dropping weapon."
+}
+dropammo
+{
+	sound/comms/female/dropammo.wav		"Dropping ammo."
+}
+droparmor
+{
+	sound/comms/female/droparmor.wav		"Dropping armor."
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Commands
+//////////////////////////////////////////////////////////////////////////////////////
+getflag
+{
+	sound/comms/female/getenemyflag.wav		"Get the enemy flag!"
+}
+returnflag
+{
+	sound/comms/female/getourflag_a1.wav		"Return our flag!"
+}
+attacknow
+{
+	sound/comms/female/attacknow.wav		"Attack now!!"
+}
+defendbase
+{
+	sound/comms/female/defendbase.wav		"Defend our base!"
+}
+defendflag
+{
+	sound/comms/female/defendflag.wav		"Defend our flag!"
+}
+defendcarrier
+{
+	sound/comms/female/defendfc.wav		"Defend our flag carrier."
+}
+followme
+{
+	sound/comms/female/followme.wav		"Follow me."
+}
+camp
+{
+	sound/comms/female/stayhere.wav		"Stay here!"
+}
+cancelorder
+{
+	sound/comms/female/cancel.wav			"Cancel that!"
+}
+fallback
+{
+	sound/comms/female/fallback.wav		"Fall back and regroup."
+}
+standby
+{
+	sound/comms/female/standby.wav			"Stand by to attack."
+}
+takeoverhere
+{
+	sound/comms/female/takethisposition.wav	"Take over this position."
+}
+coverme
+{
+	sound/comms/female/coverme.wav			"Cover me!"
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Aknowledgements
+//////////////////////////////////////////////////////////////////////////////////////
+affirmative
+{
+	sound/comms/female/affirmative.wav		"Affirmative."
+	sound/comms/female/acknowledged.wav		"Acknowledged."
+	sound/comms/female/acknowledged_a2.wav		"Roger that!"
+}
+negative
+{
+	sound/comms/female/negative.wav		"Negative!"
+	sound/comms/female/negative_a1.wav		"Command declined."
+	sound/comms/female/negative_a2.wav		"No way."	
+}
+attackingnow
+{
+	sound/comms/female/attackingnow.wav		"Attacking now!"
+}
+onoffense
+{
+	sound/comms/female/attackingenemy_a1.wav	"On offense."
+}
+ondefense
+{
+	sound/comms/female/defendingbase_a1.wav	"On defense."
+}
+guardingflag
+{
+	sound/comms/female/guardingflag.wav		"Guarding our flag room."
+}
+guardingperimeter
+{
+	sound/comms/female/guardingperim.wav		"Guarding perimeter."
+}
+guardingmiddle
+{
+	sound/comms/female/guardingmid.wav		"Guarding middle."
+}
+rearming
+{
+	sound/comms/female/rearming.wav		"I'm rearming!"
+}
+awaitingorders
+{
+	sound/comms/female/awaitingorders.wav		"Awaiting orders."
+}
+awaitingquad
+{
+	sound/comms/female/awaitingquad.wav		"Waiting for quad."
+}
+outofposition
+{
+	sound/comms/female/outofposition.wav		"Out of position!"
+}
+holdingposition
+{
+	sound/comms/female/holdingposition.wav		"Holding position."
+}
+ready
+{
+	sound/comms/female/ready.wav			"Ready."
+}
+gettingflag
+{
+	sound/comms/female/goingforflag_a1.wav		"Going after our flag!"
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Requests
+//////////////////////////////////////////////////////////////////////////////////////
+needoffensehelp
+{
+	sound/comms/female/needhelpoff.wav		"I need help on offense."
+}
+needdefhelp
+{
+	sound/comms/female/needhelpdef.wav		"I need help on defense."
+}
+needammo
+{
+	sound/comms/female/needammo.wav		"I need ammo."
+}
+needarmor
+{
+	sound/comms/female/needarmor.wav		"I need armor."
+}
+needbackup
+{
+	sound/comms/female/needbackup.wav		"I need backup!"
+}
+needweapons
+{
+	sound/comms/female/needweapons.wav		"I need weapons!"
+}
+needbasestatus
+{
+	sound/comms/female/reqbasestatus.wav		"Requesting base status."
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Globals
+//////////////////////////////////////////////////////////////////////////////////////
+
+//quick
+yes
+{
+	sound/comms/female/yes.wav			"Yes."
+}
+no
+{
+	sound/comms/female/no.wav			"No!"
+}
+ouch
+{
+	sound/comms/female/ouch.wav			"Ouch."
+}
+oops
+{
+	sound/comms/female/oops.wav			"Oops."
+}
+kickass
+{
+	sound/comms/female/kickass.wav			"Kick Ass!!!!"
+}
+
+//friendly
+goodgame
+{
+	sound/comms/female/goodgame.wav		"Good game."
+}
+thankyou
+{
+	sound/comms/female/thankyou.wav		"Thank you."
+	sound/comms/female/thankyou_a1.wav		"Thanks."
+}
+niceshot
+{
+	sound/comms/female/niceshot.wav		"Nice shot."
+	sound/comms/female/niceshot_a1.wav		"Good shot."
+}
+sorry
+{
+	sound/comms/female/oops_a1.wav			"Damn, sorry."
+}
+bye
+{
+	sound/comms/female/bye.wav			"Bye."
+}
+
+//angry
+damn
+{
+	sound/comms/female/damn.wav			"Damn it!"
+}
+noooo
+{
+	sound/comms/female/noooo.wav			"Nooooo!!!!"
+}
+teamsuneven
+{
+	sound/comms/female/teamsuneven.wav		"Teams are uneven."
+	sound/comms/female/teamsuneven_a2.wav		"Even up the teams!!"
+}
+
+
+///////
+// team chat globals
+//////
+
+letskickass
+{
+	sound/comms/female/letskickass.wav		"Let's kick some ass!!!"
+}
+goodjob
+{
+	sound/comms/female/goodjob.wav			"Good job."
+}
+
+///////
+// taunts... separated for maximum flexibility in flinging insults.
+///////
+
+//quick
+yeah
+{
+	sound/comms/female/yeah.wav			"YEAH!!!"
+}
+haha
+{
+	sound/comms/female/haha.wav			"Hahaha!!!"
+}
+
+//insult
+yousuck
+{
+	sound/comms/female/taunt1.wav			"You suck!"
+}
+rocketmagnet
+{
+	sound/comms/female/taunt7.wav			"Rocket magnet!"
+}
+//fragged
+nicetry
+{
+	sound/comms/female/taunt5.wav			"Nice try."
+}
+trythatagain
+{
+	sound/comms/female/tryagain.wav			"Try that again!"
+}
+andstayout
+{
+	sound/comms/female/taunt10.wav			"And stay out!!!"
+}
+//owned
+ikickyourass
+{
+	sound/comms/female/taunt4.wav			"I kick your ass!"
+}
+allyourbase
+{
+	sound/comms/female/taunt12.wav			"All your base are owned by us!"
+}
+thatsourflag
+{
+	sound/comms/female/taunt11.wav			"I believe that was OUR flag!"
+}
+
+///////////////////////////////////////////////////////////
+// end main definitions //
+///////////////////////////////////////////////////////////

@@ -1,0 +1,7 @@
+15 // what you get for capture
+10 // what your team gets for capture
+5  // what you get for picking up enemy flag
+3  // what you get for fragging enemy flag carrier
+5  // bonus for fraggin someone who has recently hurt your flag carrier
+3  // bonus for fraggin someone while either you or your target are near your flag carrier
+1  // bonus for fraggin someone while either you or your target are near your flag

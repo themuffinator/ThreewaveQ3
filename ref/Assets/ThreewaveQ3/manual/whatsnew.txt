@@ -1,0 +1,34 @@
+
+-------------------------------------
+ Quake III Radio 1.1
+
+ by SatanzJudge (SatanzJudge@gmx.de)
+ http://www.planetquake.com/q3radio/
+-------------------------------------
+
+------------
+ WHAT'S NEW
+------------
+
+Version 1.1 [May 13, 2000]
+* Radio configuration files (support for user-defined radio sounds)
+* HUD radio menu
+* Female & Neutral radio voices added
+* Radio operator's head shown on HUD
+* Based on newest game source 1.17
+* Manual
+
+Version 1.0 [April 27, 2000]
+* New radio voice (by booger)
+* Added g_allowRadio
+* Added g_radioFlood
+* Added radio sprite
+* Code Improvements
+
+Test 0.2 [April 25, 2000]
+* Added 38 radio messages
+* Playable now
+
+Test 0.1 [April 24, 2000]
+* First official release
+* Only to sample radio messages

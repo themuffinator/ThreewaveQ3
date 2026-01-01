@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>Threewave Manual</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+
+<style type="text/css">
+a:hover {color: #FCD703; text-decoration: none}
+a:link {font:verdana; text-decoration: none}
+A { text-decoration:none }
+.FORM {font-family: verdana,Arial, Helvetica, sans-serif; font-size: xx-small ; background-color: 000000; color: 3F4749;  border: #FFFFFF; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px}
+</style>
+
+
+</HEAD>
+
+<BODY text=#ffffff vLink=#c0c0c0 aLink=#c0c0c0 link=#cccccc bgColor=#000000 
+leftMargin=0 topMargin=0>
+<P align=center><br>
+</P>
+<div align="center">
+  <center>
+  <table border="1" cellpadding="0" cellspacing="0" width="730" bordercolor="#333333">
+    <tr>
+      <td>
+<div align="center">
+  <table border="1" cellpadding="0" cellspacing="0" width="732" bordercolor="#000000">
+    <tr>
+      <td width="730"><img border="0" src="images/toplogo2.jpg" width="730" height="185"></td>
+    </tr>
+    <tr>
+      <td width="730" background="images/hznt_bar.jpg" valign="top" align="right"><font face="arial, helvetica" size="2"><b>irc.enterthegame.com
+        #Threewave&nbsp;&nbsp;&nbsp;</b></font> </td>
+    </tr>
+  </table>
+</div>
+<TABLE cellSpacing=0 cellPadding=0 width=732 align=center border=1 bordercolor="#000000">
+      
+      
+  <TR bgColor=silver>
+    <TD vAlign=top align=left bgColor=#6F0000 background="images/lt_bground.jpg" width="125">
+    
+      
+    
+      <img hspace="0" src="images/nav.jpg" border="0" width="125" height="16"><br>
+      <br>
+      &nbsp;&nbsp;<a href="index.html"><b><font face="Arial" size="2">Table Of
+      Contents</font></b></a>
+      <p align="center"><b><a href="8.html"><font face="Arial" size="2">&lt;
+      Back</font></a><font face="Arial" size="2">&nbsp;&nbsp; </font><font face="Arial" size="3">-&nbsp;&nbsp;</font><font face="Arial" size="2">
+      <a href="10.html">Forth &gt;</a></font></b>
+</TD>
+    <TD vAlign=top width=601 bgColor=#181818>
+      &nbsp;
+      <div align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="95%">
+          <tr>
+            <td width="100%">
+              <div align="left">
+                <table border="0" cellpadding="2" cellspacing="0" width="100%">
+                  <tr>
+                    <td width="100%">
+                      <p align="center">
+                      
+                      </center>
+                      <p align="left"><b><font face="arial, helvetica" size="3">Threewave
+                      Portal Server Administration FAQ</font></b>
+                    <hr align="left" size="3" color="#850707">
+                      <font face="Arial">
+
+  <font size="2">
+
+  <div align="center">
+    <h4>Questions with Answers</h4>
+  </div>
+  <h3><font color="#f0f0a0" size="4">Intro</font></h3>
+  <font size="0"><!-- META: The meat of the document should go here -->
+  </font>
+  <p><b>What does the portal do for Quake? What IS the portal?</b>
+  <p>The Portal lets you throw up maps and/or any ThreeWave supported gametypes
+  so people can walk through teleporters and vote for their favourite games.
+  <p><b>Okay, but how does that work in the game?</b>
+  <p>More specifically, everyone spawns in a small chamber. Around them is a
+  number of portals (between 8 and 64 depending on the map). Each one has a
+  graphic of a map on it.
+  <p>Once the first player jumps through, a timer starts counting down. The
+  player ends up in a 'minigame', which is a goofy interpretation of the rules
+  of Quake in a small room. This should be chaotic.
+  <p>When that timer runs out, if the gametype voting is to happen, everyone is
+  spawned into the backend of the space station where they vote for their
+  favourite mode of play.
+  <p>Then the map ends as quickly as possible and the real map comes up in it's
+  place.
+  <h3><font color="#f0f0a0" size="4">Quickstart</font></h3>
+  <p><b>I just installed ThreeWave CTF and I want to run a quick and dirty
+  portal server for a LAN, how do I get up and running real fast?</b>
+  <p>ThreeWave CTF ships with two premade portal configs. Do your normal server
+  config parameters, but append <tt>+exec portal.cfg</tt> for the CTF portal or <tt>+exec
+  dm-portal.cfg</tt> to your string.
+  <p><b>I want to rip out the ability to vote for a specific gametype, but I
+  like map voting. What do I change in the config file?</b>
+  <p>Set <tt>p_gameTypeVote</tt> to 0 in the aforementioned config. Then set <tt>p_defaultGametype</tt>
+  to your preferred game. The list of supported types is as follows:
+  <ul>
+    <li>0 - Free For All
+    <li>1 - Tournament (one on one)
+    <li>3 - Team Deathmatch
+    <li>4 - ThreeWave CTF
+    <li>9 - CaptureStrike
+    <li>10- Classic CTF</li>
+  </ul>
+  <i>You don't want to use a number that isn't in this list.</i> The other types
+  are not supported.
+  <h3><font face="Arial" color="#f0f0a0" size="4">Using the portal for more than
+  Capturing Flags</font></h3>
+  <p><b>I've heard that the ThreeWave portal is good for more than just choosing
+  CTF games. What is the extent of it's massive powers?</b>
+  <p>Cough. Well, you can throw any map you want in for voting on the portal. As
+  soon as you change a single console variable and type <tt>map_restart</tt> on
+  the server, everyone on the server will see the new graphic.
+  <p>Make sure everyone on the server is likely to have the map! If they don't,
+  they will get disconnected (or auto download) if it gets voted in.
+  <p>The same thing applies for gametypes. You can mix and match the possible
+  gametypes that you can vote for.
+  <p><b>I want to run a portal server with custom maps. How do I do this?</b>
+  <p>Relatively simple. When you would normally type 'map &lt;mapname&gt;' on
+  the server to load a map, you would add it to your portal config file in a
+  different fashion. There are 64 portal variables named p_portalMap01 through
+  p_portalMap64. Each one represents a portal, and you can change one of them to
+  the name of your new map (sans '.bsp').
+  <p>Note that if the particular portal that you're playing on has less than 64
+  portals, some of the p_portalMap console variables will be irrelevant to your
+  players.
+  <p>For example, adding q3tourney6 to the 12th portal would be done like this:
+  <p><tt>p_portalMap12 &quot;q3tourney6&quot;</tt>
+  <p><b>Okay, that's maps, but how do I change the gametypes?</b>
+  <p>There are five gametype portals. The console variables that apply to them
+  (see above) are p_gtPortal01 through p_gtPortal05. Set these to -1 to disable
+  each one, or to one of the gametype values above. For example:
+  <pre><tt>
+seta p_gtPortal01 &quot;-1&quot; // Disabled
+seta p_gtPortal02 &quot;4&quot;  // CTF
+seta p_gtPortal03 &quot;9&quot;  // CaptureStrike
+seta p_gtPortal04 &quot;10&quot; // Classic CTF 
+seta p_gtPortal05 &quot;-1&quot; // Disabled
+</tt></pre>
+  <h3><font color="#f0f0a0" size="4">Removing Maps</font></h3>
+  <p><b>I have somewhat negative feelings towards a map. How do I remove one
+  from being votable?</b></p>
+  <p>In the true nature of democracy, you can pre-emptively deny the winning of
+  a map. The best way of doing this is to throw a big 'X' over the map so people
+  know it was there, and they can't vote now. You can do that by adding to a
+  comma separated list known as <tt>p_disablePortalList</tt>. Say you wanted to
+  disable <tt>p_portalMap</tt> three, fifty and twelve:
+  <p><tt>p_disablePortalList &quot;03,50,12&quot;</tt></p>
+  <p><b>How come some halls are blocked in the 64 portal map?</b><font size="0">
+  <p></font>
+  <p>If no portals in a hallway are activated with a p_portalMap## console
+  variable, the hallway is blocked to save the time of those who would wander
+  in.
+  <h3><font color="#f0f0a0" size="4">Customizing the Portal Experience Further</font></h3>
+  <p><b>I noticed there is a random portal. How does it work and how can I
+  remove/add it?</b>
+  <p>The random portal ships enabled. Every user who goes through it will vote
+  for a random map that is enabled on the server at that time. Every user will
+  also be voting for the SAME random map.
+  <p>Use the console variable p_randomPortal to enable or disable the random
+  portal.
+  <p><b>How do I change how long a minigame plays for?</b>
+  <p><tt>p_voteSeconds</tt> is the number of seconds. This defaults to sixty.
+  <p><b>How do I disable the portal altogether?</b>
+  <p>Use <tt>p_enablePortal</tt> 0, and you can have your map rotation back.
+  <h3><font color="#f0f0a0" size="4">Callvoting and other means of getting
+  around</font></h3>
+  <b>
+  <p>Does the portal have to come back after every map?</b>
+  <p>Right now, the portal comes back after every map for another vote. We are
+  looking into additional methods for possible future releases.<b>
+  <p>I want to callvote a map, but I can't. How do I callvote a map?</b>
+  <p>You callvote a map by turning the portal off with <tt>p_enablePortal 0</tt>.
+  Or else, you can callvote portal from the menu to go back to the portal
+  immediately.
+  <p><b>I'm at the server console. How do I bring the server back to the portal?</b>
+  <p>Type <tt>vstr GotoPortal</tt>, and it will load. This is similar to typing <tt>vstr
+  nextmap</tt> when the portal isn't loaded and you have a map rotation like a
+  normal server.
+  <p align="center"><b><font face="Arial" size="2">&nbsp;</font><a href="../Documents%20and%20Settings/Administrator/Local%20Settings/Temp/5.html"><font face="Arial" size="2"><br>
+  </font></a><a href="8.html"><font face="Arial" size="2">&lt;
+      Back</font></a><font face="Arial" size="2">&nbsp;&nbsp; </font><font face="Arial" size="3">-&nbsp;&nbsp;</font><font face="Arial" size="2">
+      <a href="10.html">Forth &gt;</a></font></b></p>
+                      <p align="left">&nbsp;</p>
+                      </font>
+                    <p align="left">
+                      <br>
+                    </p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+  <center>
+              <p>&nbsp;
+              </p>
+              <div align="left">
+                <table border="0" cellpadding="2" cellspacing="0" width="100%">
+                  <tr>
+                    <td width="100%" align="right">
+                      <p align="center"></p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </TD></TR></TABLE>
+      </td>
+    </tr>
+  </table>
+</div>
+ <!--Tracker--> 
+                <center><p><br>
+</center>
+</BODY></HTML>

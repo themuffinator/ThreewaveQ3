@@ -1,0 +1,426 @@
+<!--INSERTADTHISPAGE -->
+<html>
+<head>
+<title>Quake III Radio Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#FF0000" vlink="#FF0000" alink="#FF3333">
+<table border="0" align="center">
+  <tr>
+    <td nowrap align="center" valign="middle">&nbsp;</td>
+    <td nowrap>
+      <div align="center"><img src="images/logo.gif" width="400" height="100" align="middle" alt="Quake III Radio" border="0"></div>
+    </td>
+  </tr>
+  <tr align="center" valign="middle"> 
+    <td nowrap height="20">&nbsp;</td>
+    <td height="20" nowrap>
+      <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+2">Manual</font></p>
+      <p>&nbsp; </p>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap align="center" valign="top"> 
+      <table cellspacing="0" cellpadding="0" border="0" align="center">
+        <tr>
+          <td width="20" height="20" valign="top" background="images/top_left.gif">&nbsp;</td>
+          <td width="100" height="20" valign="top" background="images/top_middle.gif">&nbsp;</td>
+          <td width="20" height="20" valign="top" background="images/top_right.gif">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top" background="images/left.gif" width="20" nowrap>&nbsp;</td>
+          <td valign="top" background="images/middle.gif" width="100" nowrap align="center"> 
+            <div align="center"> 
+              <p><br>
+                <font face="Arial, Helvetica, sans-serif"><font color="#FFFFFF" size="-1"><b><a href="#Manual_Overview">Overview<br>
+                <br>
+                </a> <a href="#Manual_Installation">Installation</a><br>
+                <br>
+                <a href="#Manual_Configuration">Configuration</a><br>
+                <br>
+                <a href="#Manual_UserDefined">User-defined Radio Messages</a><br>
+                <br>
+                <a href="#Manual_Menu">HUD Radio Menu<br>
+                <br>
+                </a></b></font></font><font face="Arial, Helvetica, sans-serif" color="#FFFFFF" size="-1"><b><a href="#Manual_CmdVar">Commands 
+                &amp; Variables</a><br>
+                <br>
+                <a href="#Manual_FAQ">FAQ</a><br>
+                <br>
+                <a href="#Manual_Contact">Contact</a><br>
+                <br>
+                <a href="#Manual_Credits">Credits</a><br>
+                </b></font></p>
+              </div>
+          </td>
+          <td valign="top" background="images/right.gif" width="20" nowrap>&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="20" height="20" valign="top" background="images/bottom_left.gif">&nbsp;</td>
+          <td width="100" height="20" valign="top" background="images/bottom_middle.gif">&nbsp;</td>
+          <td width="20" height="20" valign="top" background="images/bottom_right.gif">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <td nowrap align="center" valign="top"> 
+      <table cellspacing="0" cellpadding="0" border="0" align="center">
+        <tr>
+          <td width="20" height="20" valign="top" background="images/top_left.gif">&nbsp;</td>
+          <td width="450" valign="top" background="images/top_middle.gif" height="20">&nbsp;</td>
+          <td width="20" height="20" valign="top" background="images/top_right.gif">&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="20" valign="top" background="images/left.gif" nowrap>&nbsp;</td>
+          <td width="450" valign="top" background="images/middle.gif" align="left" nowrap> 
+            <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+1"><b><br>
+              <a name="Manual_Overview"></a>Overview</b></font></p>
+            <blockquote> 
+              <p align="left"><font 
+              face="Arial, Helvetica, sans-serif">Communication is very important 
+                for teamplay gametypes like Team DM and CTF. Most players don't 
+                have time to read text messages in the heat of the fight. Quake 
+                III Radio adds support for radio messages to Quake III Arena, 
+                messages played through the speakers of any multimedia computer. 
+                These radio messages can be user-defined by configuration files, 
+                so your own personalised messages can be added. The radio messages 
+                are stored as pre-recorded wave files, Quake III Radio is not 
+                a real time communications system (mainly because they use too 
+                much bandwidth).</font></p>
+            </blockquote>
+            <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+1"><b><a name="Manual_Installation"></a>Installation</b></font></p>
+            <blockquote> 
+              <p><font face="Arial, Helvetica, sans-serif"><i>The following installation 
+                describtion assumes that your are using MS Windows but these steps 
+                should work well with Linux and MacOS, too.<br>
+                </i><br>
+                Installation of Quake III Radio is pretty simple. Download the 
+                newest version of Quake III Radio from <b><a target=_blank 
+              href="http://www.planetquake.com/q3radio/">http://www.planetquake.com/q3radio/</a></b>. 
+                Open up WinZip (or any other ZIP tool) and extract Quake III Radio's 
+                ZIP file into your Quake III Arena directory. Make sure that the 
+                "</font><font face="Courier New, Courier, mono">Use folder names</font><font face="Arial, Helvetica, sans-serif">" 
+                checkbox is enabled. If you have an old Quake III Radio folder 
+                in your Quake III Arena directory, delete it first and backup 
+                files from this folder if needed (unless the Quake III Radio ZIP 
+                you downloaded is an update version).</font> </p>
+              <p><font face="Arial, Helvetica, sans-serif">You can load the mod 
+                with "</font><font face="Courier New, Courier, mono">quake3.exe 
+                +set fs_game radio</font><font 
+              face="Arial, Helvetica, sans-serif">" or select it from Quake III's 
+                mod menu.</font></p>
+            </blockquote>
+            <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+1"><b><a name="Manual_Configuration"></a>Configuration</b></font></p>
+            <blockquote> 
+              <p><font face="Arial, Helvetica, sans-serif">A sample configuration 
+                file can be found in the Quake III Radio folder, it's <font face="Courier New, Courier, mono">sample_config.cfg</font>. 
+                Open this file with Notepad (or any other text editor) to see 
+                what it does. Load it with the console command &quot;<font face="Courier New, Courier, mono">\exec 
+                sample_config.cfg</font>&quot;. You can, of course, adjust this 
+                file to your needs or create a new one. Be sure to have a working 
+                Quake III Radio configuration file before you enter any game.<br>
+                <br>
+                Quake III Radio has three radio commands:</font></p>
+              <table width="350" border="0" align="center" cellpadding="5" cellspacing="1">
+                <tr> 
+                  <td width="175" valign="top"> <font face="Arial, Helvetica, sans-serif">radio 
+                    <i>&lt;message&gt;</i></font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Message 
+                    all</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">radio_team 
+                    <i>&lt;message&gt;</i></font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Message 
+                    team only</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">radio_tell 
+                    <i>&lt;message&gt;</i></font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Message 
+                    player under crosshair</font></td>
+                </tr>
+              </table>
+              <p><font face="Arial, Helvetica, sans-serif"><i>&lt;message&gt;</i> 
+                must be a valid radio messages defined in the loaded radio configuration 
+                file. These commands can be bound to to keys, for example</font></p>
+              <p align="center"><font face="Arial, Helvetica, sans-serif"> bind 
+                a &quot;radio_team attack&quot;</font></p>
+              <p><font face="Arial, Helvetica, sans-serif">Three radio voices 
+                are provided with Quake III Radio. You can select them by loading 
+                the correct radio configuration file. The options are:</font> 
+              </p>
+              <ol>
+                <li><font face="Courier New, Courier, mono">radio_male.cfg</font></li>
+                <li><font face="Courier New, Courier, mono">radio_female.cfg</font></li>
+                <li><font face="Courier New, Courier, mono">radio_neutral.cfg</font></li>
+              </ol>
+              <p><font face="Arial, Helvetica, sans-serif">Type "</font><font face="Courier New, Courier, mono">cg_radioCfg 
+                &lt;configfile&gt;</font><font 
+              face="Arial, Helvetica, sans-serif">" (for example "</font><font 
+              face="Courier New, Courier, mono">cg_radioCfg radio_female.cfg</font><font 
+              face="Arial, Helvetica, sans-serif">") in console and then, to load 
+                the new voice, "</font><font 
+              face="Courier New, Courier, mono">reloadRadioCfg</font><font 
+              face="Arial, Helvetica, sans-serif">".</font> <br>
+                <font 
+              face="Arial, Helvetica, sans-serif">Players will hear all radio 
+                messages in the voice they selected. So if you use female voice 
+                and another user male, this user will hear your radio messages 
+                as male and NOT female.</font></p>
+            </blockquote>
+            <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+1"><b><a name="Manual_UserDefined"></a>User-defined 
+              Radio Messages</b></font></p>
+            <blockquote> 
+              <p><font face="Arial, Helvetica, sans-serif">Yes, you can add your 
+                own radio messages. How? Easy: Create a radio config file. I suggest 
+                using one of the standard radio configuration files (</font><font 
+              face="Courier New, Courier, mono">radio_male.cfg</font><font 
+              face="Arial, Helvetica, sans-serif">, </font><font 
+              face="Courier New, Courier, mono">radio_female.cfg</font><font 
+              face="Arial, Helvetica, sans-serif"> or </font><font 
+              face="Courier New, Courier, mono">radio_neutral.cfg</font><font 
+              face="Arial, Helvetica, sans-serif">) as a base. Make a copy of 
+                one, rename it (example: </font><font 
+              face="Courier New, Courier, mono">radio_john.cfg</font><font 
+              face="Arial, Helvetica, sans-serif">) and then edit the file with 
+                a text editor. As you can see, a radio config file consists of 
+                three strings per line. The first string is the radio message 
+                name which will be used with the radio commands, the second string 
+                is the directory and name of the wave file which should be played 
+                when transmitting this radio message and the third string is the 
+                alternative radio text message which will be transmitted along 
+                with the radio message. Here's an example:</font></p>
+              <center>
+                <p><font face="Arial, Helvetica, sans-serif" size="-1">affirmative 
+                  sound/radio/john/affirmative.wav "Affirmative!"</font> 
+              </center>
+              <p><font face="Arial, Helvetica, sans-serif">Be sure not to use 
+                any special characters like "!", "?", "&amp;", "?", "." ... in 
+                the command and filename string for Windows compatability reasons. 
+                C++ style comments like // and /* */ can be used in a radio configuration 
+                file. </font>
+              <p><font face="Arial, Helvetica, sans-serif"><font color=#ffff00>IMPORTANT: 
+                <br>
+                The alternative text string has to be put into inverted commas!<br>
+                </font></font><font face="Arial, Helvetica, sans-serif" color="#ffff00">No 
+                string must be larger than 128 characters!<br>
+                The maximum amount of radio messages per radio configuration file 
+                is 256!</font>
+              <p><font face="Arial, Helvetica, sans-serif">Note that users which 
+                do not have your radio messages won't hear them, they will only 
+                receive the alternative text message!</font></p>
+            </blockquote>
+            <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+1"><b><a name="Manual_Menu"></a>HUD 
+              Radio Menu</b></font></p>
+            <blockquote>
+              <p><font face="Arial, Helvetica, sans-serif">The radio menu can 
+                be accessed with the command <font face="Courier New, Courier, mono">radioMenu</font>. 
+                If you want to send a radio message to your teammates by using 
+                the menu, type or bind the command &quot;<font face="Courier New, Courier, mono">radioMenu 
+                team</font>&quot; which will open up the radio menu for team messages. 
+                While the menu is opened, the commands &quot;weapon 0&quot; to 
+                &quot;weapon 9&quot; can be used to navigate the menu. These commands 
+                are bound to the keys 0-9 by default. The menu command for messages 
+                to all players is &quot;<font face="Courier New, Courier, mono">radioMenu 
+                all</font>&quot;. Use &quot;<font face="Courier New, Courier, mono">radioMenu 
+                tell</font>&quot; when sending a radio message to the crosshair 
+                player.</font></p>
+            </blockquote>
+            <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+1"><b><a name="Manual_CmdVar"></a>Commands 
+              &amp; Variables</b></font></p>
+            <blockquote> 
+              <p><font face="Arial, Helvetica, sans-serif"><b>Client:</b></font></p>
+              <table width="350" border="0" align="center" cellpadding="5" cellspacing="1">
+                <tr> 
+                  <td width="175" valign="top"> <font face="Arial, Helvetica, sans-serif">radio 
+                    <i>&lt;message&gt;</i></font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Message 
+                    all players</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">radio_team 
+                    <i>&lt;message&gt;</i></font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Message 
+                    your team only</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">radio_tell 
+                    <i>&lt;message&gt;</i></font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Message 
+                    the player under crosshairs</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">radioMenu 
+                    <i>&lt;mode&gt;</i></font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Opens 
+                    the radio menu. <i>&lt;mode&gt;</i> is the radio mode which 
+                    can be: &quot;all&quot;, &quot;team&quot; and &quot;tell&quot;. 
+                    To close the menu, just execute the radioMenu command again.</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">cg_radioCfg 
+                    &lt;configfile&gt;</font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Set 
+                    the radio configuration file. Default = radio_male.cfg</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">reloadRadioCfg</font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Reloads 
+                    current radio configuration file. Use after changing cg_radioCfg!</font></td>
+                </tr>
+              </table>
+              <p><font face="Arial, Helvetica, sans-serif"><b>Server:</b><br>
+                </font></p>
+              <table width="350" border="0" align="center" cellpadding="5" cellspacing="1">
+                <tr> 
+                  <td width="175" valign="top"> <font face="Arial, Helvetica, sans-serif">g_allowRadio 
+                    [0/1] </font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Enable/Disable 
+                    radio messages for all players. Default = 1 (on)</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">g_radioFlood 
+                    [msec] </font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Set 
+                    forced wait time between two radio messages from the same 
+                    player, prevents flooding. Default = 1000 = 1 sec</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">g_radioDead 
+                    [0/1]</font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">Allow 
+                    dead players to send and receive radio messages. Default = 
+                    1 (on)</font></td>
+                </tr>
+              </table>
+            </blockquote>
+            <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+1"><b><a name="Manual_FAQ"></a>FAQ</b></font></p>
+            <table width="350" border="0" align="center">
+              <tr> 
+                <td> 
+                  <p><font face="Arial, Helvetica, sans-serif"><b>Is this a client 
+                    </b></font><font face="Arial, Helvetica, sans-serif"><b>side 
+                    only mod? Does it work with any server/mod?</b></font></p>
+                </td>
+              </tr>
+              <tr> 
+                <td><font face="Arial, Helvetica, sans-serif">No. Both, client 
+                  and server need to run the mod. You can only use Quake III Radio 
+                  on servers running it.</font></td>
+              </tr>
+            </table>
+            <br>
+            <table width="350" border="0" align="center">
+              <tr> 
+                <td> 
+                  <p><font face="Arial, Helvetica, sans-serif"><b>Bots don't respond 
+                    on radio messages or use them, why?</b></font></p>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+                  <p><font face="Arial, Helvetica, sans-serif">This feature was 
+                    first planned but can no longer be implemented. How can the 
+                    bots know what user-defined radio messages mean?</font></p>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table width="350" border="0" align="center">
+              <tr> 
+                <td> 
+                  <p><font face="Arial, Helvetica, sans-serif"><b>Is Quake III 
+                    Radio similiar to Team Sound or Roger Wilco?</b></font></p>
+                </td>
+              </tr>
+              <tr> 
+                <td> 
+                  <p><font face="Arial, Helvetica, sans-serif">Not really. Team 
+                    Sound and Roger Wilco are real time communication tools, that 
+                    means you have to use a headset and speak your sentences. 
+                    All spoken words are transmitted through the network (in IP 
+                    packets). The disadvantages are that these tools use up CPU 
+                    resources (while running in the background) and network bandwith 
+                    (because the sound stream has to be send through the network). 
+                    The advantage is that these tools work with real time communication 
+                    and no pre-recorded messages.</font> <br>
+                    <font face="Arial, Helvetica, sans-serif">The advantages of 
+                    Quake III Radio are that it does not need more CPU power than 
+                    Quake III Arena does. Quake III Radio does not send voice 
+                    streams through the network. The wave files are stored on 
+                    each client and just played locally when someone transmit 
+                    a radio message.</font></p>
+                </td>
+              </tr>
+            </table>
+            <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+1"><b><a name="Manual_Contact"></a>Contact</b></font></p>
+            <blockquote> 
+              <p><font face="Arial, Helvetica, sans-serif">Quake III Radio has 
+                been created by<br>
+                <a href="mailto:SatanzJudge@gmx.de"><b>SatanzJudge</b></a><br>
+                <br>
+                Website:<br>
+                <a href="http://www.planetquake.com/q3radio/" target="_blank"><b>http://www.planetquake.com/q3radio/</b></a></font></p>
+            </blockquote>
+            <p><font face="Arial, Helvetica, sans-serif" color="#FF0000" size="+1"><b><a name="Manual_Credits"></a>Credits</b></font></p>
+            <blockquote> 
+              <table width="350" border="0" align="center" cellpadding="5" cellspacing="1">
+                <tr> 
+                  <td width="175" valign="top"> <font face="Arial, Helvetica, sans-serif">id 
+                    Software </font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">For 
+                    this great game</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif"><a href="mailto:johnjdick@yahoo.com"><b>booger</b></a> 
+                    &amp; <a href="mailto:johnjdick@yahoo.com"><b>Taffy</b></a></font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">For 
+                    the radio voices</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif"><a href="mailto:Cu_in_hell@hotmail.com"><b>CuInHell</b></a></font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">For 
+                    the radio sprite</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif">Alfred 
+                    Reynolds, Eric Smith & Mike Weldon</font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">For 
+                    helping me with C++</font></td>
+                </tr>
+                <tr> 
+                  <td width="175" valign="top"><font face="Arial, Helvetica, sans-serif"><a href="http://www.firearmsmod.com/" target="_blank"><b>HL 
+                    FireArms</b></a> mod team</font></td>
+                  <td width="175"><font face="Arial, Helvetica, sans-serif">'cause 
+                    they rule :-)</font></td>
+                </tr>
+              </table>
+              
+              <br>
+            </blockquote>
+          </td>
+          <td width="20" valign="top" background="images/right.gif" nowrap>&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="20" height="20" valign="top" background="images/bottom_left.gif">&nbsp;</td>
+          <td width="450" valign="top" background="images/bottom_middle.gif" height="20">&nbsp;</td>
+          <td width="20" height="20" valign="top" background="images/bottom_right.gif">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<div align="center"><font size="-1"><br>
+  <font face="Arial, Helvetica, sans-serif" color="#FF0000">best viewed in 1024x768+ 
+  with <a href="http://www.microsoft.com/windows/IE/" target="_blank">Internet 
+  Explorer</a> 5+</font></font><br>
+  <font color="#FF0000" face="Arial, Helvetica, sans-serif" size="-1"> last modified: 
+  <SCRIPT LANGUAGE="JavaScript">
+	<!--
+	document.write(document.lastModified);
+	-->
+	</SCRIPT>
+  </font> </div>
+</body>
+</html>

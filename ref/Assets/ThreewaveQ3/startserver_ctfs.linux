@@ -1,0 +1,4 @@
+#!/bin/sh
+#this is a shell script to start a linux server
+cd ..
+./q3ded +set fs_game threewave +set dedicated 2 +set vm_game 2 +set vm_cgame 2 +set vm_ui 2 +exec default_server.cfg +exec ctfs_portal.cfg

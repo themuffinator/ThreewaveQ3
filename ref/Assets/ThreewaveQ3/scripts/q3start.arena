@@ -1,0 +1,29 @@
+{
+map            "q3start"
+longname       "Threewave Portal"
+capturelimit   "8"
+type           "cctf ctf oneflag harvester overload"
+author         "Casey"
+quote          "the portal is like a box of chocolates"
+mod            "threewave"
+}
+
+{
+map            "q3start08"
+longname       "Portal 08"
+capturelimit   "8"
+type           "cctf ctf oneflag harvester overload"
+author         "Casey"
+quote          "I'm just too lazy to aim"
+mod            "threewave"
+}
+
+{
+map            "q3start20"
+longname       "Portal 20"
+capturelimit   "8"
+type           "cctf ctf oneflag harvester overload"
+author         "Casey"
+quote          "Everybody remember where we parked"
+mod            "threewave"
+}

@@ -1,0 +1,118 @@
+*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+*=*=*=*=*=*=*=*=*      CLIENT        =*=*=*=*=*=*=*=*=
+*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+
+New colors for models and names
+- there are new colors you can use for your name or model, they are
+  < 8-9-a-b-c-d-e-f >
+
+Colored player models
+- once you set cg_usepromodeskins 1, you can select colors for your models
+  color          : set colors for your own model
+  cg_enemyColors : set colors for your enemies
+  cg_forceColors : force your teammates to use your colors instead of theirs
+  setting colors follows this scheme : <WEAPON EFFECTS><HEAD><TORSO><LEGS><RAIL CORE>
+  i.e.: set color "35db9"
+
+Radio
+- vosay,vosay_team have been removed (voice only), if you wish to replace text in a voice
+  command, you do it like so: /vsay haha "LOL!"
+  by adding your replacement text after the vsay, if you dont the default string will be used
+- new autoradio system, cg_autoradio 1 (by default) you will send messages upon certain events
+  to your teammates, such as:
+  * Getting the flag (event_gotflag)
+  * Getting the quad damage (event_gotquad)
+  * Seeing the enemy flag carrier (event_seecarrier)
+  * Dropping items for your teammates (event_droprune,event_dropweapon,event_dropammo,
+    event_droparmor,event_dropflag)
+  Note: by setting the event_* cvars you can customize what is automatically said to your
+  teammates, i.e.: /set event_droprune "vsay droprune; say_team I am dropping the $e rune!"
+- new item reporting system, you can now automatically tell your teammates if an item is
+  available by standing next to the item and doing /reportitem (you can bind this command)
+  * Mega health available (event_megaavail)
+  * Armor available (event_armoravail)
+  * Rune available (event_runeavail)
+  * Item available (event_itemavail)
+  Note: here like in autoradio you can customize the messages sent by changing the cvars event_*
+
+More automation
+- Automatically take a screenshot of the scoreboard at match end with cg_autoScreenshot 1
+- Automatically record every match you play from start to finish with cg_autoRecord 1
+
+Callvote-ing
+- Give a reason with your votes by adding extra text after the callvote commmand
+  i.e.: /callvote kick Jimbo he is not playing!
+
+Switching teams
+- No need to switch to spectator to switch teams in Capture Strike
+
+Statistics
+- you can get more precise stats if you call it like this : /stats -precise
+
+
+
+
+
+*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+*=*=*=*=*=*=*=*=*      SERVER        =*=*=*=*=*=*=*=*=
+*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+
+New server settings
+======================================================
+Lithium
+- g_lithium 1 will put runes&grapple in deathmatch modes, and 1flag ctf
+
+Runes
+- g_runes, 0 will disable runes, 1 is default regular, 2 will spawn 2 sets of runes
+
+Callvoting
+- can now disable or enable certain voting by setting the value of g_allowvote to the sum 
+  of what you want enabled which are:
+	off		: 0 (only 0, duh)
+	kick voting     : 1
+	map voting      : 2
+	portal voting   : 4
+	gametype voting : 8
+	settings voting : 16
+	restart voting  : 32
+	nextmap voting  : 64
+
+Team balancing
+- no flag events when teams are unbalanced 
+  (g_teamForceBalance now defines the maximum difference between the number of players 
+  in each team, default of 1)
+- g_keepTeams, 
+  0 will send everyone back to spectator after each match
+  1 will keep the same teams after each match
+  2 will sort people in teams depending on their skill to get good even matches going
+  
+Message of the day
+- by setting g_motdfile you can specify a different file than motd.txt for you MOTD
+  i.e.: /set g_motdfile "my_motd.txt"
+
+New gametypes
+======================================================
+1 Flag CTF
+- g_gametype 5 is now 1 flag CTF, can be lithium-ed to use runes and grapple
+
+Threewave Arena
+- g_gametype 11 is a clan arena lookalike, using the CTFS physics, you can load
+  Rocket Arena 3 maps in it, but it doesnt support multi-arena play, everyone will be
+  put in the clan arena
+
+Portal stuff
+======================================================
+Portals in general:
+- may now specify a set of gametypes for every portal using p_portalGametypesXX
+  where XX is the number of the portal for which these gametypes will be used, you 
+  set them like so (lets say we want p_portalMap10 to be playable in capture strike 
+  and 1flag) : set p_portalGametypes10 "-1,9,-1,5,-1"
+- for the regular portal, you can now specify the amount of last voted maps disabled
+  by setting the number in p_disableLastPlayedPortals
+  
+Episode portal:
+- 4 groups of 1 to 8 maps that will cycle, groups are 01->08, 09->16, 17->24, 25->32
+- first portal of each group must be set, or else that episode will be disabled
+- to specify a specific set of gametypes for one episode, set the gametype string for the first
+  map in that episode
+- enable it by using q3start2 and setting p_enablePortal 2

@@ -1,0 +1,18 @@
+new client cvars
+----------------
+cg_radioVoice [0...3]
+- your radio voice : 1 is male, 2 is female, 3 is robot, 0 is model default gender
+
+cg_acceptVoiceOnly [0,1]
+- sets wether you will accept receiving voice only messages (no text)
+
+cg_forceVoice [0...3]
+- force every voice message you receive to use the specified voice
+
+cg_teamVoiceOnly [0,1]
+- if this is enabled you will only receive voice messages from your team
+
+cg_predictGrapple [0,1]
+- if this cvar is on your grapple movement will be predicted by the client and the server,
+good idea for HPBs to leave it on, if it is off, only the server will decide your movement
+hence having a "true-er" position in the game (only for LPBs)

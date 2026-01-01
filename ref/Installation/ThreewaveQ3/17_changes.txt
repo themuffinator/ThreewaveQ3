@@ -1,0 +1,106 @@
+3w 1.7 (29/03/2004)
+====================================================================
+- add: CCTF, two new runes, vampire and grapple
+       -vampire gives health to the user when he damages enemies (75% of health damage)
+        it can also take some health from shooting dead corpses
+       -grapple gives a bonus of 100 to shoot and 100 to pull speeds
+       ( g_cctfNewRunes, default:1 -> enabled )
+- add: offhand grapple (g_offhandgrapple 1 on server, clients use +button5 to use)
+- add: added matchmode, lockteams and coaching to votes, you need to enable 
+       "matchmode" votes by adding 128 to the g_allowVote cvar on the server
+- add: g_ctfs_roundswap cvar and worldspawn flag "ctfs_roundswap" that makes team swap
+       spawn positions each round (red base is always the defense base, blue base is always
+       the offense base, this option is intended for assymetrical maps, and a feature
+       requested by some fans for more "assault" styled maps
+       Note: 4 maps have been hardcoded as using round swap for ctfs, they are q3wc3 q3wc7 q3wcp8 q3wcp24
+- add: option to select which of the multiarena maps is used in arena mode, "/callvote setarena #"
+       or "setarena #" directly from the console, this vote is always active if voting is allowed
+- add: added the defense/offense icons (assist and defense medals on the 3w status bar)
+- add: ctfs roundtime cvar ( g_ctfsRoundTimeLimit, defaults to 150 which is 2.5 minutes )
+- add: added a realtime clock, cg_drawRealTime is the cvar to enable/disable
+- add: changed the portal system completely, new portal entity func_portal
+- add: lavadoom and coin game to all portals
+- add: new admin command adm_gametype
+- add: admins can now specify a few settings along with the gametypes they set in the portal
+       add 256 to the gametype number to enable lithium (grapple + runes)
+       add 512 to the gametype number to enable offhand grapple
+       add 1024 to the gametype number to enable instagib (only for cctf atm)
+       add 2048 to the gametype number to disable the runes (only in gametypes with runes, duh)
+- add: cctf now spawns "bonus" quads on the losing team's flag (if the team loses by more than 1)
+       every 90 seconds, should even things out
+       ( g_cctfBonusQuadTime, default:90 (set to 0 to disable) )
+- add: cctf now spawns you 25% of the time on the other team's respawns (might be in their base)     
+       this tries to emulate q2ctf's single spawn system, where you could spawn anywhere  
+- add: a small ok map i did a while ago (derean01.bsp) for another mod of mine, thought i'd include
+       it, its not threewave caliber by any means...
+- add: new cvar g_arenaRoundLimitExit will make arena mode exit the map as soon as a team 
+       hits the round limit (instead of restarting until the timelimit is hit)
+- add: vote logging, when votes pass they are logged and the user who called the vote (by his clientnum)       
+- fix: fixed timers when pausing the game and connecting/disconnecting afterwards
+- fix: not all players sent to spectator when matchmode is toggled
+- fix: removed prediction on shotgun hitting other players
+       shotgun should only draw blood if it actually hits the player
+- fix: holding fire button with gauntlet doesn't work any longer after respawn
+- fix: powerups cannot be disabled in portal area any longer
+- fix: jumppad crashing damage when someone jumps over you
+- fix: specred and specblue now set the correct forced team model
+- fix: spectators are now allowed in the portal (for punkbuster)
+- fix: exploit where someone could do follow1 and follow2 in ctfs and arena 
+       and not be on a team
+- fix: promode (pm) model icons are not loaded in team gametypes 
+       (uses correct red/blue icons)       
+- fix: only failed votes are counted for maximum number of votes
+- fix: dont send teleport event when players are sent to the intermission
+- fix: cannot send "tell" messages to live players any longer
+- fix: "walk sound" when the player is dead and the corpse falls on the ground
+- fix: "walk sound" when you creep up to another player who is not moving
+       ( had to disable item pickup prediction to fix bugs caused by the fix )
+- fix: rebound bug when you fall to the ground sometimes
+- fix: fixed adm_status sending too much data and crashing clients
+- fix: in arena, no more falling damage during countdown
+- fix: nailguns/nails used to be reported as runes in the voice msg reportitem
+- fix: spawning with machine gun in portal minigames that don't have the mg
+- fix: bonus quads no longer spawn in instagib
+- fix: last damaged would show yourself if you rocket jumped
+- fix: from 1.7 rc4, servers not going back to portal when they were empty
+- chg: teamed spectators will now hear the last player alarm and the teammate 
+       death sound
+- chg: ripped out the anticheating code, gameplay should be smoother
+- chg: improved networking of CTFS and ARENA events (no more double restarts)
+- chg: make ctfs round start freeze drop the players to the floor
+- chg: lower effect of ratio on skill calculation (raise effect of damage given / damage received to balance)
+       generally reworked the weapon weights to better reflect skill ponderation
+- chg: reworked the loading screen art
+- chg: lowered CTFS ammo counts of almost all weapons
+       MG_AMMO  200 (unchanged)
+       SG_AMMO  30 from 40
+       GL_AMMO  10 (unchanged)
+       LG_AMMO  120 from 150
+       RL_AMMO  25 from 40
+       PG_AMMO  60 from 125
+       RG_AMMO  25 from 40
+- chg: 999 players not sent to spectator when matchmode is active
+- chg: voice chat allowed interval raised from 2 seconds to 5 seconds
+- chg: ctfs will now exit when the pointlimit or timelimit is reached and the one team has no chance
+       to make up the point difference
+- chg: fast weapon switch now applies to all gamemodes including regular CTF       
+- chg: allow switching teams and not dying during the countdown at the start (ctfs, arena)
+- chg: new shaders needed for map levelshots, check remaps6.shader for example
+- chg: don't allow disabling quad in cctf
+- chg: changed "adminpass" to "adminpassword" and "g_adminpass" to "g_adminpassword"
+- chg: rewrote portal code so that the information sent to players is reduced 10 fold, this
+       change should fix the crash on load some people were experiencing when going to the portal
+       ( cl_parsegamestate: bad command byte )
+- chg: CCTF raised regen rune's delay to 1.65 seconds from 1.25 seconds (regen was too strong)
+- chg: dmg/time removed from highscores in favor of skill, which depicts "skill" better, lolz!
+- chg: CTFS added one bonus point for not dropping the flag once it has been touched
+       ( g_ctfsNewScoring, default:1 (enabled) )
+- chg: need to hold the flag for a certain time OR capture it without dying to get the bonus
+       ( g_ctfsFlagHoldForBonus default:10 )      
+- chg: stats -precise now needs a clientnum to work (i.e.: stats -precise 3)
+- chg: callvoting lithium in ctfs and arena no longer works
+- chg: kick all vote no longer works
+- chg: removed round announcement team colored backgrounds
+- chg: connect logging modified to include the punkbuster guid
+- rmv: episode portal system was removed because of technical problems, sorry to any fans, it might
+       come back in another patch, but for now it will not work

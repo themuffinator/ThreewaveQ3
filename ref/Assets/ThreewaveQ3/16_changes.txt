@@ -1,0 +1,27 @@
+Threewave 1.6
+------------------------------------------------------------------------------------
+add:
+- added cg_pmFixes which defaults to disabled (0), enabling this (1)
+  will make the prediction and movement more "OSP/CPMA-like" like in 3w 1.5
+- added adm_gotoportal, permits admins to send the server back to the portal
+- added g_lithium and g_runes to callvoting
+- added cg_nochatbeep, works same as OSP`
+- hud now shows location of dropped flags (except when flag is dropped with the drop command)
+- added system to respawn flags if they ever go missing for more than 5 seconds
+- added g_specLaggedClients to send people who 999 for more than "g_specLaggedClients" seconds to spectator
+  (the cvar specifies the number of seconds someone may remain 999, default is 10 seconds)
+- added cg_drawSpeed, like cpma/osp
+chg:
+- reduced player score sorting so that skill calculation doesnt slow down
+  the server
+- if you have memory problems, like getting stuck at "Awaiting snapshot" and you cant
+  afford more memory, you can disable voice chats, which will free around 10 megs of ram
+  by setting cg_noVoiceChats 0 (note: using the shortcut that gets added to your desktop
+  when you use the exe Windows install, to start threewave may also help with this problem)  
+- draw attacker has been put back in
+fix:
+- fixed gametype callvoting not working
+- fixed coaching in ctfs/arena
+- fixed unlockteams not working while paused in matchmode
+- fixed g_keepteams settings fuxing up matchmode restarts
+- fixed possible deleting of white flag in 1flag while paused

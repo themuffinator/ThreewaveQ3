@@ -1,0 +1,185 @@
+female
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Statements
+//////////////////////////////////////////////////////////////////////////////////////
+ihaveflag
+{
+	sound/radio/female/haveflag.wav			"I have the flag!"
+}
+baseattack
+{
+	sound/radio/female/baseunderattack.wav		"The base is under attack!"
+}
+flagcarrierhere
+{
+	sound/radio/female/flaghere.wav			"Enemy flag carrier is here!"
+}
+gotquad
+{
+	sound/radio/female/gotquad.wav			"I've got the quad!"
+}
+incoming
+{
+	sound/radio/female/incoming.wav			"Incoming!"
+}
+lostflag
+{
+	sound/radio/female/lostflag.wav			"I lost the flag!"
+}
+underattack
+{
+	sound/radio/female/underattack.wav		"I'm under attack!"
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Commands
+//////////////////////////////////////////////////////////////////////////////////////
+getflag
+{
+	sound/radio/female/getenemyflag.wav		"Get the enemy flag!"
+}
+returnflag
+{
+	sound/radio/female/getourflag.wav		"Get our flag back!"
+}
+offense
+{
+	sound/radio/female/attack.wav			"Attack!"
+	sound/radio/female/attackenemy.wav		"Attack the enemy!"
+}
+defend
+{
+	sound/radio/female/defendbase.wav		"Defend the base!"
+}
+defendflag
+{
+	sound/radio/female/defendbase.wav		"Defend the base!"
+}
+followme
+{
+	sound/radio/female/followme.wav			"Follow me!"
+	sound/radio/female/escortme.wav			"Escort me!"
+}
+camp {
+	sound/radio/female/stayhere.wav			"Stay here!"
+}
+coverme {
+	sound/radio/female/coverme.wav			"Cover me!"
+}
+wait {
+	sound/radio/female/waitforsignal.wav		"Wait for my signal!"
+}
+//////////////////////////////////////////////////////////////////////////////////////
+// Aknowledgements
+//////////////////////////////////////////////////////////////////////////////////////
+affirmative
+{
+	sound/radio/female/affirmative.wav		"Affirmative!"
+}
+negative
+{
+	sound/radio/female/negative.wav			"Negative!"
+}
+onoffense
+{
+	sound/radio/female/attackingenemy.wav		"Attacking the enemy!"
+}
+ondefense
+{
+	sound/radio/female/defendingbase.wav		"Defending the base!"
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Requests
+//////////////////////////////////////////////////////////////////////////////////////
+needattackers
+{
+	sound/radio/female/moreattackers.wav		"Need more attackers!"
+}
+needdefenders
+{
+	sound/radio/female/moredefence.wav		"Need more defense!"
+}
+needammo
+{
+	sound/radio/female/needammo.wav			"I need ammo."
+}
+needarmor
+{
+	sound/radio/female/needarmor.wav		"I need armor."
+}
+needbackup
+{
+	sound/radio/female/needbackup.wav		"I need backup."
+}
+needescort
+{
+	sound/radio/female/needescort.wav		"I need escort."
+}
+needhealth
+{
+	sound/radio/female/needhealth.wav		"I need health."
+}
+needweapon
+{
+	sound/radio/female/needweapon.wav		"I need weapons"
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Globals
+//////////////////////////////////////////////////////////////////////////////////////
+gotohell
+{
+	sound/radio/female/gotohell.wav			"Go to hell..."
+}
+onyourteam
+{
+	sound/radio/female/onyourteam.wav		"I'm on your team idiot!"
+}
+hahaha {
+	sound/radio/female/haha.wav			"Ha Ha Ha!"
+}
+bye {
+	sound/radio/female/bye.wav			"Bye!"
+}
+damn {
+	sound/radio/female/damn.wav			"Damn!"
+}
+kickyourass {
+	sound/radio/female/kickass.wav			"I kick your ass!"
+}
+nicefrag {
+	sound/radio/female/nicefrag.wav			"Nice frag!"
+}
+no {
+	sound/radio/female/no.wav			"No!"
+}
+revenge {
+	sound/radio/female/revenge.wav			"Revenge..."
+}
+
+// Q3 bots support
+kill_insult
+{
+	sound/radio/female/kickass.wav			"I kick your ass!"
+	sound/radio/female/haha.wav			"Ha Ha Ha!"
+}
+
+taunt {
+	sound/radio/female/kickass.wav			"I kick your ass!"
+}
+
+death_insult {
+	sound/radio/female/gotohell.wav			"Go to hell..."
+	sound/radio/female/no.wav			"No!"
+	sound/radio/female/damn.wav			"Damn!"
+}
+
+kill_gauntlet {
+	sound/radio/female/haha.wav			"Ha Ha Ha!"
+}
+
+praise {
+	sound/radio/female/nicefrag.wav			"Nice frag!"
+}
